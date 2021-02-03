@@ -1,6 +1,6 @@
 package sets_and_maps_advanced.lab;
 
-import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -26,15 +26,10 @@ public class AcademyGraduation {
 	private static void printRegister(TreeMap<String, double[]> registerAcademy) {
 		
 		registerAcademy.forEach((kay, value) -> {
+			DecimalFormat num = new DecimalFormat("###.################");
 			System.out.printf("%s is graduated with ", kay);
-			BigDecimal average = new BigDecimal(0);
-			for (int i = 0; i < value.length; i++) {
-				BigDecimal num = new BigDecimal(value[i]);
-				average = average.add(num);
-			}
-			BigDecimal length = new BigDecimal(value.length);
-			average = average.divide(length);
-			System.out.println(average);
+			double average = Arrays.stream(value).average().orElse(0);
+			System.out.println(num.format(average));
 		});
 		
 	}
