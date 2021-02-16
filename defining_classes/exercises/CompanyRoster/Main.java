@@ -24,7 +24,7 @@ public class Main {
 				int age = Integer.parseInt(input[5]);
 				employee = new Employee(name, salary, position, department, email, age);
 			}else if (input.length == 5) {
-				if (input[4].matches("^\\d$")) {
+				if (input[4].matches("[\\d$]+")) {
 					int age = Integer.parseInt(input[4]);
 					employee = new Employee(name, salary, position, department, age);
 				}else {
