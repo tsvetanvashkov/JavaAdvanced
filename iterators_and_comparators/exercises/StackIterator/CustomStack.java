@@ -1,3 +1,5 @@
+package iterators_and_comparators.exercises.StackIterator;
+
 import java.util.Iterator;
 
 public class CustomStack implements Iterable<Integer>{

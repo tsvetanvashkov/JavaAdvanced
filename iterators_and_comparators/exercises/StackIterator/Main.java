@@ -1,6 +1,6 @@
+package iterators_and_comparators.exercises.StackIterator;
 
 import java.util.Scanner;
-
 
 public class Main {
 
